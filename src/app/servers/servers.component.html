@@ -14,4 +14,16 @@
 <!-- <p>{{ allowNewServer }}</p>
 <p [innerText]="allowNewServer"></p> -->
 <app-server></app-server>
-<app-server></app-server>
+<hr />
+<label>Username</label>
+<input type="text" class="form-control" [(ngModel)]="username" />
+<p>{{ username }}</p>
+<button
+  class="btn btn-primary"
+  [disabled]="username === ''"
+  (click)="ResetUser()"
+>
+  Reset User
+</button>
+
+<!-- or use (click)="username=''" -->
