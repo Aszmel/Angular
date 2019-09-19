@@ -8,6 +8,10 @@ import { Component } from "@angular/core";
       .online {
         color: white;
       }
+      .over5 {
+        background-color: blue;
+        color: white;
+      }
     `
   ]
 })

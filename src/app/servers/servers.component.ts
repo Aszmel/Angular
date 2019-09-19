@@ -13,6 +13,8 @@ export class ServersComponent implements OnInit {
   username = "";
   serverCreated = false;
   servers = ["TestServer", "TestServer 2"];
+  hiddenText = "";
+  arrayText = [];
 
   constructor() {
     setTimeout(() => {
@@ -35,5 +37,15 @@ export class ServersComponent implements OnInit {
   //------test section------
   ResetUser() {
     this.username = "";
+  }
+  displayHiddenParagraph() {
+    this.hiddenText = "Hidden text";
+    this.arrayText.push(this.hiddenText);
+  }
+  counter() {
+    return this.arrayText.length;
+  }
+  getColor() {
+    return this.arrayText.length >= 5 ? "blue" : "";
   }
 }
